@@ -14,7 +14,7 @@ jobs:
         with:
           python-version: "3.11"
       - run: pip install requests
-      - run: python market_analyst_notify.py
+      - run: python market_analyst_notify-v1.0.1.py
         env:
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
           SYMBOLS: "BTCUSDT,ETHUSDT"
