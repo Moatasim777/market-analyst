@@ -2,7 +2,7 @@ name: Level 1 Market Analyst
 
 on:
   schedule:
-    - cron: "0,30 * * * *"   # every 30 minutes, UTC. Edit to change frequency.
+    - cron: "0 * * * *"   # every 30 minutes, UTC. Edit to change frequency.
   workflow_dispatch: {}       # lets you trigger it manually from the GitHub app too
 
 jobs:
@@ -14,7 +14,7 @@ jobs:
         with:
           python-version: "3.11"
       - run: pip install requests
-      - run: python market_analyst_notify-v1.2.0.py
+      - run: python market_analyst_notify-v1.2.1.py
         env:
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
