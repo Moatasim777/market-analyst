@@ -14,7 +14,8 @@ jobs:
         with:
           python-version: "3.11"
       - run: pip install requests
-      - run: python market_analyst_notify-v1.1.0.py
+      - run: python market_analyst_notify-v1.2.0.py
         env:
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
-          SYMBOLS: "BTCUSDT,ETHUSDT"
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          SYMBOLS: "BTCUSDT"
